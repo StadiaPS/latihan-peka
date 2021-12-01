@@ -1,0 +1,249 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: system-ui, sans-serif;
+	background-color: #333;
+	padding-bottom: 1000px;
+}
+
+.container-servis, .container-gallery, .container-diskon {
+	margin: 100px auto;
+	border-bottom: 30px solid #fff;
+	padding-bottom: 100px;
+	background-color: #333;
+}
+
+h1 {
+	font: bold 50px system-ui;
+	color: #fff;
+	text-align: Center;
+	font-style: italic;
+	text-transform: uppercase;
+	text-shadow: 0 0 5px lightblue, 
+				 0 0 7px lightblue, 
+				 0 0 10px lightblue, 
+				 0 0 13px navajowhite, 
+				 0 0 15px navajowhite;
+}
+
+/* Kolom */
+
+.container-kolom {
+	max-width: 800px;
+	background-color: #fff;
+	margin: 0px auto 100px;
+}
+
+div.kolom-tengah, div.kolom-kiri {
+	padding: 0 20px;
+}
+
+div.kolom-kiri ul li {
+	display: inline-block;
+	padding: 0 5px 0 3px;
+	border-right: 1.5px solid black;
+}
+
+div.kolom-kanan {
+	background-color: palevioletred;
+	padding: 5px;
+	border: 5px solid #fff;
+	box-sizing: border-box;
+}
+
+/* Servis */
+
+.container-servis {
+	max-width: 800px;
+	box-sizing: border-box;
+}
+
+.container-servis .kotak {
+	margin: 25px 0;
+	padding: 30px;
+	box-sizing: border-box;
+}
+
+.kotak.satu { background-color: lightblue; }
+.kotak.dua { background-color: lightgreen; }
+.kotak.tiga { background-color: lightsalmon; }
+
+/* Gallery */
+
+.container-gallery {
+	max-width: 800px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.thumbnail {
+	width: 50%;
+	padding: 2.5px;
+	box-sizing: border-box;
+}
+
+.thumbnail:hover {
+	background-color: rgba(255, 255, 255, .5);
+}
+
+.thumbnail img {
+	width: 100%;
+}
+
+/* Diskon */
+
+.container-diskon {
+	max-width: 400px;
+	display: flex;
+}
+
+.card {
+	background-color: rgba(255, 255, 255, .15);
+	padding: 15px;
+	box-sizing: border-box;
+	border-radius: 15px;
+	border: 1.5px solid #fff;
+	font-size: .3em;
+	color: #fff;
+	flex: 1;
+	margin: 5px;
+}
+
+.card h3 {
+	height: 35px;
+	background-color: yellow;
+	text-align: center;
+	color: #000;
+	display: flex;
+}
+
+.card h3 span {
+	margin: auto;
+}
+
+.card.big {
+	transform: scale(1.1);
+}
+
+/* Centering */
+
+.container-centering {
+	max-width: 200px;
+	height: 200px;
+	margin: 50px auto;
+	display: flex;
+	background-color: #fff;
+}
+
+.kotak-akhir {
+	width: 100px;
+	height: 100px;
+	margin: auto;
+	background-color: blue;
+	padding: 15px;
+	color: #fff;
+	box-sizing: border-box;
+	display: flex;
+}
+
+.kotak-akhir span {
+	margin: auto;
+}
+
+
+/* Responsive */
+
+@media( min-width: 600px ) {
+
+	/* kolom */
+
+	.container-kolom {
+		display: flex;
+	}
+
+	div.kolom-kiri {
+		flex: 1;
+		order: 1;
+	}
+
+	div.kolom-tengah {
+		flex: 3;
+		order: 2;
+	}
+
+	div.kolom-kanan {
+		flex: 1;
+		order: 3;
+	}
+
+
+	div.kolom-kiri ul li {
+		padding-right: 0px;
+		border-right: 0px solid black;
+	}
+
+	/* Servis */
+
+	.container-servis {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.container-servis .kotak {
+		width: 30%;
+	}
+
+	/* Gallery */
+
+	.container-gallery {
+		justify-content: center;
+		box-sizing: border-box;
+	}
+
+	.thumbnail {
+		width: 25%;
+		border: 1.5px solid rgba(255, 255, 255, 1);
+		border-top: none;
+		padding: 3px;
+		box-sizing: border-box;
+	}
+
+	/* diskon */
+
+	.container-diskon {
+		max-width: 700px;
+	}
+
+	.card {
+		margin: 13.5px;
+		font-size: .9em;
+	}
+
+	.card.big {
+		transform: scale(1.15);
+	}
+
+	.card h3 {
+		height: 65px;
+	}
+
+	/* centering */
+
+	.container-centering {
+		max-width: 400px;
+		height: 400px;
+	}
+
+	.kotak-akhir {
+		width: 100px;
+		height: 100px;
+		margin: auto;
+		background-color: blue;
+		padding: 15px;
+		color: #fff;
+		box-sizing: border-box;
+	}
+}
